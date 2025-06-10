@@ -1,4 +1,4 @@
-package com.example.preparcialayd
+package com.example.preparcialayd.A
 
 import B.DataRepo
 import B.PriceObserver
@@ -12,6 +12,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.preparcialayd.R
 
 class MainScreen : AppCompatActivity(), PriceObserver {
     private val repo = DataRepo(this)
