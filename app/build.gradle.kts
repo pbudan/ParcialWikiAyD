@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.preparcialayd"
+    namespace = "com.example.parcialvuelosayd"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.preparcialayd"
+        applicationId = "com.example.parcialvuelosayd"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -32,6 +32,16 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+    packaging {
+        resources {
+            excludes += "META-INF/LICENSE.md"
+            excludes += "META-INF/LICENSE-notice.md"
+            excludes += "META-INF/LICENSE"
+            excludes += "META-INF/NOTICE"
+            excludes += "META-INF/DEPENDENCIES"
+            excludes += "META-INF/*.kotlin_module"
+        }
     }
 }
 

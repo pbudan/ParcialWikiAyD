@@ -1,9 +1,9 @@
-package com.example.preparcialayd.B
+package com.example.parcialvuelosayd.B
 
 import android.content.Context
 import android.util.Log
 import ayds.observer.Subject
-import com.example.preparcialayd.C.DataRepo
+import com.example.parcialvuelosayd.C.DataRepo
 import kotlin.concurrent.thread
 import kotlin.math.roundToInt
 

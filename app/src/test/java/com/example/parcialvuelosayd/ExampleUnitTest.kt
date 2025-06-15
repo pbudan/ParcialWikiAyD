@@ -1,4 +1,4 @@
-package com.example.preparcialayd
+package com.example.parcialvuelosayd
 
 import org.junit.Test
 
