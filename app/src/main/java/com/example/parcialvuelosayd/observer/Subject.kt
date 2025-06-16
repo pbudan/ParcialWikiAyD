@@ -1,5 +1,6 @@
 package ayds.observer
 
+import com.example.parcialvuelosayd.A.BoundingBox
 import java.util.*
 
 class Subject<T> : Observable<T>, Publisher<T> {

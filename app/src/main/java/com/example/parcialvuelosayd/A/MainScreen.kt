@@ -19,22 +19,22 @@ class MainScreen : AppCompatActivity() {
 
         dependency = SomeClass(this)
         dependency.observer.subscribe { result ->
-            onPrice(result.first, result.second)
+            onVuelo(result.first, result.second)
         }
 
-        val spinner = findViewById<Spinner>(R.id.spinnerMonedas)
-        val monedas = listOf("USD", "EUR", "CAD", "JPY", "RUB", "GBP", "KRW", "PLN")
+        val spinner = findViewById<Spinner>(R.id.spinnerPaises)
+        val paises = listOf("Argentina", "Chile", "Brasil", "Perú")
 
         //El dropdown en android se llama Spinner y se le debe poner un adapter con los valores a desplegar
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, monedas)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, paises)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
 
         //Se le agrega un listener al spinner para reaccionar a los cambios de selección de items
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-                val monedaSeleccionada = monedas[position]
-                dependency.fetchPrice(monedaSeleccionada)
+                val pais = paises[position]
+                dependency.fetchVuelos(pais)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -42,10 +42,16 @@ class MainScreen : AppCompatActivity() {
 
     }
 
-    fun onPrice(symbol: String, price: Int) {
-        val mensaje = "$symbol – $price"
+    fun onVuelo(pais: String, vuelos: MutableList<String>) {
+        val mensaje = "Vuelos sobre $pais"
+        val mensajeVuelos = buildString {
+            vuelos.forEachIndexed{index,vuelo ->
+                append("${index + 1}. $vuelo\n")
+            }
+        }
         runOnUiThread {
-            findViewById<TextView>(R.id.textPrecio).text = mensaje
+            findViewById<TextView>(R.id.textMensaje).text= mensaje
+            findViewById<TextView>(R.id.textVuelo).text = mensajeVuelos
         }
     }
 }

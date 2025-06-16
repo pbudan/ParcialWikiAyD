@@ -9,14 +9,14 @@ import kotlin.math.roundToInt
 
 class SomeClass(context: Context) {
 
-    val observer = Subject<Pair<String, Int>>()
+    val observer = Subject<Pair<String, MutableList<String>>>()
     private val repository = DataRepo(context)
 
-    fun fetchPrice(monedaSeleccionada: String) {
+    fun fetchVuelos(paisSeleccionado: String) {
         thread {
-            val result = repository.fetchPrice(monedaSeleccionada)
+            val result = repository.fetchVuelos(paisSeleccionado)
             Log.e("RESULT", result.toString())
-            observer.notify(Pair(monedaSeleccionada, result.roundToInt()))
+            observer.notify(Pair(paisSeleccionado, result))
         }
     }
 }

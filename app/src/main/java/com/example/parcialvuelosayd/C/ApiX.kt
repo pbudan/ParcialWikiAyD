@@ -3,7 +3,7 @@ import android.content.Context
 import org.json.JSONObject
 
 class ApiX(private val context:Context) {
-    fun get(symbol: String): Double {
+    fun get(pais: String): Double {
         return try {
             // Leer archivo desde assets/A/rates.json
             val inputStream = context.assets.open("A/rates.json")
@@ -11,7 +11,7 @@ class ApiX(private val context:Context) {
 
             val json = JSONObject(jsonString)
             val rates = json.getJSONObject("rates")
-            rates.getDouble(symbol.uppercase())
+            rates.getDouble(pais.uppercase())
         } catch (e: Exception) {
             e.printStackTrace()
             0.0
