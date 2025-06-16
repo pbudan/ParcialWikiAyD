@@ -46,9 +46,11 @@ class MainScreen : AppCompatActivity() {
         val mensaje = "Vuelos sobre $pais"
         val mensajeVuelos = buildString {
             vuelos.forEachIndexed{index,vuelo ->
-                append("${index + 1}. $vuelo\n")
+                append("${index + 1}. $vuelo\n")//es un solo string con saltos de linea
             }
         }
+
+        //esto se ejecuta en la interfaz grafica
         runOnUiThread {
             findViewById<TextView>(R.id.textMensaje).text= mensaje
             findViewById<TextView>(R.id.textVuelo).text = mensajeVuelos

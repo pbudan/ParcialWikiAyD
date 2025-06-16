@@ -16,6 +16,7 @@ class SomeClass(context: Context) {
         thread {
             val result = repository.fetchVuelos(paisSeleccionado)
             Log.e("RESULT", result.toString())
+            //notifica los vuelos que pasan por sobre el pais seleccionado
             observer.notify(Pair(paisSeleccionado, result))
         }
     }

@@ -33,7 +33,9 @@ class DataRepo(private val context:Context) {
            }
         } else {
             Log.e("RESULT", "Value from service")
+            //llama a la Api con las coordenadas del pais y obtiene todos los vuelos que pasan por sobre ese pais
             val result = paisCoordenadas[pais]?.let { ApiY().get(it) }
+            //para guardar la lista de vuelos en la cache a convierte en un string Json
             sharedPreferences.edit { putString(pais,gson.toJson(result)) }
             return result!!
         }
