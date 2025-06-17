@@ -35,12 +35,14 @@ android {
     }
     packaging {
         resources {
-            excludes += "META-INF/LICENSE.md"
-            excludes += "META-INF/LICENSE-notice.md"
-            excludes += "META-INF/LICENSE"
-            excludes += "META-INF/NOTICE"
-            excludes += "META-INF/DEPENDENCIES"
-            excludes += "META-INF/*.kotlin_module"
+            excludes += setOf(
+                "META-INF/LICENSE.md",
+                "META-INF/LICENSE-notice.md",
+                "META-INF/DEPENDENCIES",
+                "META-INF/NOTICE",
+                "META-INF/NOTICE.md",
+                "META-INF/LICENSE"
+            )
         }
     }
 }
