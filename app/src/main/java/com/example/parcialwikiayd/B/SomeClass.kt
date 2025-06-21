@@ -1,11 +1,10 @@
-package com.example.parcialvuelosayd.B
+package com.example.parcialwikiayd.B
 
 import android.content.Context
 import android.util.Log
 import ayds.observer.Subject
-import com.example.parcialvuelosayd.C.DataRepo
+import com.example.parcialwikiayd.C.DataRepo
 import kotlin.concurrent.thread
-import kotlin.math.roundToInt
 
 class SomeClass(context: Context) {
 

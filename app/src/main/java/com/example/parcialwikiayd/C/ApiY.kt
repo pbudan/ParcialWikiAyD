@@ -1,6 +1,6 @@
 package C
 
-import com.example.parcialvuelosayd.A.BoundingBox
+import com.example.parcialwikiayd.A.BoundingBox
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import java.net.URL

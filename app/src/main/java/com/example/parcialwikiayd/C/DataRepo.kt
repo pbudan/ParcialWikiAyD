@@ -1,10 +1,10 @@
-package com.example.parcialvuelosayd.C
+package com.example.parcialwikiayd.C
 
 import C.ApiY
 import android.content.Context
 import android.util.Log
 import androidx.core.content.edit
-import com.example.parcialvuelosayd.A.BoundingBox
+import com.example.parcialwikiayd.A.BoundingBox
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 

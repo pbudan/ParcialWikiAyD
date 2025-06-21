@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.parcialvuelosayd"
+    namespace = "com.example.parcialwikiayd"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.parcialvuelosayd"
+        applicationId = "com.example.parcialwikiayd"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

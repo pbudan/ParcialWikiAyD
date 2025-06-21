@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ParcialVuelosAyD"
+rootProject.name = "ParcialWikiAyD"
 include(":app")
  
